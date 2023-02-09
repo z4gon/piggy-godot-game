@@ -1,6 +1,6 @@
 extends Area2D
 
-var PIG_SPEED = 100
+export (int) var PIG_SPEED = 100
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
