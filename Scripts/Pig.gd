@@ -15,9 +15,6 @@ func _process(delta):
 	if Input.is_action_pressed("ui_down"):
 		move(0, speed)
 
-func is_action(name: String):
-	pass
-	
 func move(dx: float, dy: float):
 	position.x += dx
 	position.y += dy
