@@ -5,6 +5,8 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 
 ## Screenshots
 
+![Picture](./docs/screencapture.jpg)
+
 ## Nodes Used
 
 - Node
@@ -23,31 +25,33 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 
 - Using `Input.is_action_pressed("ui_right")` to react to input.
 - Using `delta` to adapt speed to frame duration.
+- Moving the transform with `position.x += dx` and `position.y += dy`
 
 ## Scripts
 
-- Export properties using `export (int) var PIG_SPEED = 100`.
-- Accessing nodes with `onready var animPlayer = $PigAnimationPlayer`.
+- Export properties using `export (int) var PIG_SPEED = 100`
+- Accessing nodes with `onready var animPlayer = $PigAnimationPlayer`
 
 ## Scenes
 
-- Extracting branch of main scene into separate scene.
+- Extracting branch off of the main scene into a separate scene.
 
 ## Animation
 
 - Creating `Idle` and `Run` animations with looping.
-- Playing animations with `animPlayer.play("Run")`.
-- Flipping H with `sprite.flip_h = isMovingLeft`.
+- Playing animations with `animPlayer.play("Run")`
+- Flipping H with `sprite.flip_h = isMovingLeft`
 
 ## Collisions
 
-- Detect collisions with a `Signal` using `func _on_Pig_area_entered(area)`.
-- Remove nodes from the scene (destroy) with `area.queue_free()`.
-- Get all overlapping areas with `var areas = get_overlapping_areas()`.
+- Detect collisions with a `Signal` using `func _on_Pig_area_entered(area)`
+- Remove nodes from the scene (destroy) with `area.queue_free()`
+- Get all overlapping areas with `var areas = get_overlapping_areas()`
+- Scaling up on each apple eaten using `scale *= 1.1`
 
 ## Collision Layers and Masks
 
 - Naming the `2D Physics` layers.
-- Assigning a `Layer` and a `Mask` to the `Area2D`.
+- Assigning a `Layer` and a `Mask` to the `Area2D`
   - `Layer` means what layer the area is on.
   - `Mask` means what layer the area will collide with.

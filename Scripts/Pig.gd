@@ -1,21 +1,21 @@
 extends Area2D
 
 export (int) var PIG_SPEED = 100
-var isMoving = false
-var isMovingLeft = false
-onready var animPlayer = $AnimationPlayer
+var is_moving = false
+var is_moving_left = false
+onready var anim_player = $AnimationPlayer
 onready var sprite = $Sprite
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	processMovement(delta)
+	process_movement(delta)
 	flip()
 	animate()
 
-func processMovement(delta):
+func process_movement(delta):
 	var speed = PIG_SPEED * delta
 	
-	isMoving = false
+	is_moving = false
 	
 	if Input.is_action_pressed("ui_right"):
 		move(speed, 0)
@@ -27,25 +27,30 @@ func processMovement(delta):
 		move(0, speed)
 
 func move(dx: float, dy: float):
-	isMoving = true
-	isMovingLeft = dx < 0 or (isMovingLeft and dx == 0) # keep facing left if no change is needed
+	is_moving = true
+	is_moving_left = dx < 0 or (is_moving_left and dx == 0) # keep facing left if no change is needed
 	
 	position.x += dx
 	position.y += dy
 	
 func flip():
-	sprite.flip_h = isMovingLeft	
+	sprite.flip_h = is_moving_left	
 
 func animate():
-	if isMoving:
-		animPlayer.play("Run")
+	if is_moving:
+		anim_player.play("Run")
 	else:
-		animPlayer.play("Idle")
+		anim_player.play("Idle")
 
 # equivalent to:
 #
 # var areas = get_overlapping_areas()
 # for area in areas:
 #	 area.queue_free()
-func _on_Pig_area_entered(area):
-	area.queue_free() # destroy the node
+func _on_Pig_area_entered(area: Area2D):
+	eat_apple(area)
+	
+func eat_apple(apple: Area2D):
+	apple.queue_free() # destroy the node
+	scale *= 1.1
+	

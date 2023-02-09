@@ -36,3 +36,18 @@ position = Vector2( 273, 133 )
 
 [node name="Apple7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 280, 34 )
+
+[node name="Apple8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 202, 155 )
+
+[node name="Apple9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 35, 152 )
+
+[node name="Apple10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 209, 19 )
+
+[node name="Apple11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 300, 87 )
+
+[node name="Apple12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 300, 162 )
