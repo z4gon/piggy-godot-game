@@ -28,8 +28,6 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 
 - Export properties using `export (int) var PIG_SPEED = 100`.
 - Accessing nodes with `onready var animPlayer = $PigAnimationPlayer`.
-- Playing animations with `animPlayer.play("Run")`.
-- Flipping H with `sprite.flip_h = isMovingLeft`.
 
 ## Scenes
 
@@ -38,3 +36,11 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 ## Animation
 
 - Creating `Idle` and `Run` animations with looping.
+- Playing animations with `animPlayer.play("Run")`.
+- Flipping H with `sprite.flip_h = isMovingLeft`.
+
+## Collisions
+
+- Detect collisions with a `Signal` using `func _on_Pig_area_entered(area)`.
+- Remove nodes from the scene (destroy) with `area.queue_free()`.
+- Get all overlapping areas with `var areas = get_overlapping_areas()`.

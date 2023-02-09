@@ -42,5 +42,10 @@ func animate():
 	else:
 		animPlayer.play("Idle")
 
+# equivalent to:
+#
+# var areas = get_overlapping_areas()
+# for area in areas:
+#	 area.queue_free()
 func _on_Pig_area_entered(area):
 	area.queue_free() # destroy the node
