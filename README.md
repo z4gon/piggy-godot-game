@@ -11,6 +11,7 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
   - Node2D
     - Area2D
     - CollisionShape2D
+  - AnimationPlayer
 
 ## Window
 
@@ -25,8 +26,15 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 
 ## Scripts
 
-- Export properties using `export (int) var PIG_SPEED = 100`
+- Export properties using `export (int) var PIG_SPEED = 100`.
+- Accessing nodes with `onready var animPlayer = $PigAnimationPlayer`.
+- Playing animations with `animPlayer.play("Run")`.
+- Flipping H with `sprite.flip_h = isMovingLeft`.
 
 ## Scenes
 
 - Extracting branch of main scene into separate scene.
+
+## Animation
+
+- Creating `Idle` and `Run` animations with looping.
