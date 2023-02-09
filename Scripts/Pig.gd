@@ -3,7 +3,7 @@ extends Area2D
 export (int) var PIG_SPEED = 100
 var isMoving = false
 var isMovingLeft = false
-onready var animPlayer = $PigAnimationPlayer
+onready var animPlayer = $AnimationPlayer
 onready var sprite = $Sprite
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -41,3 +41,6 @@ func animate():
 		animPlayer.play("Run")
 	else:
 		animPlayer.play("Idle")
+
+func _on_Pig_area_entered(area):
+	area.queue_free() # destroy the node
