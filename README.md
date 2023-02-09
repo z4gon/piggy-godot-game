@@ -44,3 +44,10 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 - Detect collisions with a `Signal` using `func _on_Pig_area_entered(area)`.
 - Remove nodes from the scene (destroy) with `area.queue_free()`.
 - Get all overlapping areas with `var areas = get_overlapping_areas()`.
+
+## Collision Layers and Masks
+
+- Naming the `2D Physics` layers.
+- Assigning a `Layer` and a `Mask` to the `Area2D`.
+  - `Layer` means what layer the area is on.
+  - `Mask` means what layer the area will collide with.
