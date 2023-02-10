@@ -18,6 +18,8 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 
 ## Screenshots
 
+https://user-images.githubusercontent.com/4588601/218189607-f295b9cc-d53d-4e8a-b35c-48d365a0f33c.mov
+
 ![Picture](./docs/1.jpg)
 
 ## Nodes Used
