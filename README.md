@@ -3,6 +3,19 @@ Godot 3.5.x
 
 A basic game made in Godot, following the course: https://heartbeast-gamedev-school.teachable.com/p/1-bit-godot-course
 
+## Table of Contents
+- [Piggy Game](#piggy-game)
+  - [Table of Contents](#table-of-contents)
+  - [Screenshots](#screenshots)
+  - [Nodes Used](#nodes-used)
+  - [Window](#window)
+  - [Input](#input)
+  - [Scripts](#scripts)
+  - [Scenes](#scenes)
+  - [Animation](#animation)
+  - [Collisions](#collisions)
+    - [Layers and Masks](#layers-and-masks)
+
 ## Screenshots
 
 ![Picture](./docs/screencapture.jpg)
@@ -49,7 +62,7 @@ A basic game made in Godot, following the course: https://heartbeast-gamedev-sch
 - Get all overlapping areas with `var areas = get_overlapping_areas()`
 - Scaling up on each apple eaten using `scale *= 1.1`
 
-## Collision Layers and Masks
+### Layers and Masks
 
 - Naming the `2D Physics` layers.
 - Assigning a `Layer` and a `Mask` to the `Area2D`
